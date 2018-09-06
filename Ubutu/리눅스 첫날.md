@@ -14,7 +14,7 @@ www.kernel.org
 
 -  **리눅스의 계보** 
 
-
+---
 
 1. 슬랙웨어 계열의 SUSE.
 
@@ -32,7 +32,7 @@ www.kernel.org
 
 -  **리눅스의 명령어**  
 
-
+---
 
 1. 리눅스의 명령어는 명령/옵션/인자 로 구성됨.
 
@@ -191,7 +191,7 @@ grep(=global regular expression print)
 
 
 - **리눅스 파일 종류**
-
+---
 
 
 1.일반 파일
@@ -209,7 +209,7 @@ grep(=global regular expression print)
 
 
 - **주요 디렉토리 기능**
-
+---
 
 
 1./dev : 장치 파일
@@ -239,7 +239,7 @@ ex) /home/user1
 
 
 - **절대 경로명과 상대 경로명**
-
+---
 
 
 1.절대경로 : 반드시 /로 시작한다. 특정 위치를 가리키는 절대 경로명은 항상 동일하다.
@@ -290,7 +290,7 @@ user1 파일이 속한 그룹
 
 - **파일시스템 구조**
 
-
+---
 
 1.슈퍼블록(superblock): 파일시스템 일반 속성 (리눅스 ext4 / xfs == 윈도우 ntfs), 크기, used/free...
 
@@ -301,6 +301,7 @@ user1 파일이 속한 그룹
 
 
 **링크의 종류**
+---
 
 1.하드링크(Hardlink)
 
@@ -319,7 +320,7 @@ user1 파일이 속한 그룹
 
 
 **하드링크 만들어보기**
-
+---
 link.org의 내용과 하드링크인 link.h의 내용이 같다.
 
 ![img](https://blogfiles.pstatic.net/MjAxODA5MDRfMTA5/MDAxNTM2MDQ4MzIwODMz.1yaSs5KzCFSCpnKUbTRVDDvK11Ns9s9HEr0aZFzjSsIg.zBpKDaRCZXrUZ_D5LPc8lGRR4iroHJ4xbHHR12sbUbMg.PNG.berote/1.png) 
@@ -329,7 +330,7 @@ link.org의 내용과 하드링크인 link.h의 내용이 같다.
 
 
 **심볼릭 링크 만들어보기**
-
+---
 link.org가 8글자이므로 심볼릭 링크의 크기는 8바이트다
 
 **![img](https://blogfiles.pstatic.net/MjAxODA5MDRfNSAg/MDAxNTM2MDQ4Nzg4MjA5.OdRvZ6cc8VYADKToqgwbCX6sMrihU6pvA8Au7nbndKAg.TpaUE0Gn_nqB295q2BZ_C762jqW6trpmaB3zot3HcqMg.PNG.berote/3.png)**
@@ -341,5 +342,3 @@ link.org가 8글자이므로 심볼릭 링크의 크기는 8바이트다
 
 
 
-
-**[출처]** [리눅스 01](https://blog.naver.com/berote/221352137947)|**작성자** [berote](https://blog.naver.com/berote)
