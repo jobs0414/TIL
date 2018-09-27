@@ -1,8 +1,7 @@
-for y in range(1, 10):
-    for x in range(y):
-        print('*',end ='')
+# 반복문
+for y in range(1, 10): # y에 대한 반복문
+    for x in range(y): # x에 대한 반복문
+        print('*', end = '')
     print()
-# 들여쓰기 오류 why? 
 
-
-
+    
