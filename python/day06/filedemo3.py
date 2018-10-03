@@ -11,6 +11,21 @@ def listDir(dir):
 
     #디렉토리 출력, 파일 출력 (이름순)
     
+
+def findDir(path):
+
+    files=os.listdir(path)
+    for f in files: 
+        fullpath = path + "\\" + f 
+        if os.path.isdir:
+            print("|"+f)
+
+        else:
+            print("|-----"+f)
+
+
+
+            
     for file in files:
 
         if os.path.isfile(file)==True: 

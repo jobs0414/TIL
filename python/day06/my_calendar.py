@@ -8,7 +8,7 @@ import datetime
 
 def header(year,month): 
     # print('\t',year,'년',month,'월')
-    print('\t{0}년 {1}월')
+    print('\t{0}년 {1}월'.format(year,month))
     print('-' * 30)
     print('일 월 화 수 목 금 토')
     # print('\t %s년 %s월')
@@ -25,11 +25,10 @@ def getLastDay(year,month):
     else: 
         month=month+1
 
-    next_month = datetime.date(year,1)  
+    next_month = datetime.date(year,month,1)  
     t = datetime.timedelta(days = 1)
     gap= next_month-t 
-    print(next_month)
-    print(gap)  # 2018-10-01   - 1 day   = 2018 -9 -30 
+    # 2018-10-01   - 1 day   = 2018 -9 -30 
     return gap.day
 
 
@@ -42,15 +41,15 @@ def display(year,month):
     lastDay=getLastDay(year,month)
     # ex 9월달 1일 토요일 -> startPos = 5 
     # 1~30까지 출력 + 1일 앞에 몇일의 공백이 오는지 출력. 
-    totalDays=startPos+ lastDay +1  # +1을 왜할까요?!
+    totalDays=lastDay+(startPos+1)  # +1을 왜할까요?!
     #1~6개는 공백을 출력하고 
     # 7번째 ~ 마지막번째(30) -> 순서대로 출력 (단, 7번째 마다 개행)
     # 단 전체 데이터는 7번째 마다 개행 
     d=1
-    for d in range(1,totalDays+1):
+    for n in range(1,totalDays+1):
 
-        if d <= ((startPos+1) % 7):
-            print('{:>2}'.format('*'),end=' ')
+        if n <= ((startPos+1) % 7):
+            print('{:>2}'.format(''),end=' ')
 
         # elif n%7 ==0: 
         #     print()
@@ -59,8 +58,9 @@ def display(year,month):
             print('{:>2}'.format(d),end=' ')
             d=d+1
        #-----------------------
-        if n%7 ==0: 
+        if d%7 ==0: 
             print()
+            #d가 7일 마다 개행해라. 
 
 
         # if startPos=7: 
