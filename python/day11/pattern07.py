@@ -8,6 +8,8 @@ pattern2 = re.compile('^python')
 pattern3 = re.compile('world.$') # ^ ~ $
 pattern4 = re.compile('world$')
 
+pattern5 = re.compile('^import\w+end$')
+
 result1 = pattern1.findall(source)
 result2 = pattern2.findall(source)
 result3 = pattern3.findall(source)
