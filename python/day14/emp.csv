@@ -1,0 +1,15 @@
+empno,ename,job,sal,comm,deptno
+7369,smith,clerk,800,,20
+7499,allen,salesman,1600,300,30
+7521,ward,salesman,1250,500,30
+7566,jones,manager,2975,,20
+7654,martin,salesman,1250,1400,30
+7698,blake,manager,2850,,30
+7782,clark,manager,2450,,10
+7788,scott,analyst,3000,,20
+7839,king,president,5000,,10
+7844,turner,salesman,1500, 0,30
+7876,adams,clerk,1100,,20
+7900,james,clerk,950,,30
+7902,ford,analyst,3000,,20
+7934,miller,clerk,1300,,10
