@@ -34,7 +34,7 @@ for input_file in glob.glob(os.path.join(input_folder, '*.xls*')):
                                                 row_index, sales_column_index))\
                                     .strip('$').replace(',', ''))
                 number_of_sales += 1
-                
+
             average_sales = '%.2f' % (total_sales / number_of_sales)
             worksheet_list.append(total_sales)
             worksheet_list.append(float(average_sales))
@@ -46,7 +46,7 @@ for input_file in glob.glob(os.path.join(input_folder, '*.xls*')):
         for list_element in workbook_output:
             list_element.append(workbook_total)
             list_element.append(workbook_average)
-        all_data.append(workbook_output)
+        all_data.extend(workbook_output)
 
 for row_index, row_info in enumerate(all_data):
     for col_index, value in enumerate(row_info):
