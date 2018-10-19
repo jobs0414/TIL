@@ -1,0 +1,42 @@
+<!Doctype html> 
+
+<html>
+<head>
+        <meta charset='utf-8'>
+        <title>사용자 정의 태그</title>
+
+</head>
+
+<body>
+    <h2>다양한 input type </h2> 
+    <form name='frm1' action='./get2.jsp' method='get'>
+        <fieldset>
+            <p>이름: <input type="text" name="name" placeholder="이름 입력."></p>
+            <p> 
+            성별: 
+            <input type='radio' name="gender" value='m' checked>남자 
+            <input type='radio' name='gender' value='f'>여자 
+            </p>
+
+            
+        <p/>
+            <p>
+                관심있는 과목을 선택하시오(복수 선택 가능): 
+                <input type="checkbox" name="subject" value="python">python 
+                <input type="checkbox" name="subject" value="HTML5">HTML5
+                <input type="checkbox" name="subject" value="Django">Django
+                <input type="checkbox" name="subject" value="Blockchain">Blockchain
+                <input type="checkbox" name="subject" value="Etherium">Etherium
+                <input type="checkbox" name="subject" value="Hyperledger">Hyperledger
+
+            </p>
+
+        <input type="submit" value='전송'>
+        <input type="reset"  value='다시작성'>
+    </fieldset>
+    </form>
+
+
+
+</body>
+</html>

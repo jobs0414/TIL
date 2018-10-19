@@ -1,0 +1,70 @@
+<!Doctype html> 
+
+<html>
+<head>
+        <meta charset='utf-8'>
+        <title>사용자 정의 태그</title>
+
+</head>
+
+<body>
+    <h2>연습 또 연습 </h2> 
+    <fieldset>
+        <legend>로그인</legend>
+    <form name='frm1' action='./get2.jsp' method='get'>
+        <p>
+        <select name = 'subjects' size='5' multiple> <!-- 전체 보기--> 
+         <input type= "text" list="majorlist" name="major"> 
+         <datalist id="majorlist"> 
+         
+            <optgroup label="Languages">
+            <option value="1">HTML</option>
+            <option value="2">python</option>
+            <option value="3">django</option>
+            <option value="4">blockchain</option>
+            <option value="5">hyperleger</option>
+            <option value="6">mac</option>
+            <option value="7">mac bookpro</option>
+        
+      
+        </optgroup>
+    </select>
+</datalist>    
+</p>
+    
+     <p> 
+    <select name='subjects2' size='3' multiple>
+        <optgroup label="o/s">
+            <option value="1">window</option>
+            <option value="2">linux</option>
+            <option value="2">linux</option>
+           
+           
+        </optgroup>
+    </select>
+    </p>
+
+    <p>
+            <select name='subjects3' size='4' multiple>
+        <optgroup label="Database">
+            <option value="1">Oracle</option>
+            <option value="2">Mysql</option>
+            <option value="3">PostgreSQL</option>
+            <option value="4">MS-SQL Server</option>
+         
+        </optgroup>
+
+        </select>
+        </p>
+
+
+
+        <input type="submit" value='전송'>
+        <input type="reset"  value='다시작성'>
+    </fieldset>
+    </form>
+
+
+
+</body>
+</html>

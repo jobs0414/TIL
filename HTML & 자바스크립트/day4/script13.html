@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function printMsg(name,age) {
+            if(age == undefined){
+                document.write("학생의 이름은", name,"입니다"+"<br>");
+            }
+            else {
+                document.write("학생의 이름은", name,"입니다"+"<br>");
+                document.write("학생의 나이는" + age, "입니다");
+                
+}
+        }
+        
+        
+        
+        </script>
+
+<button type="button" onclick="printMsg('한상우',25)">이름 나이 출력</button>
+<button type="button" onclick="printMsg('한상우')">이름만 출력</button> 
+
+
+</body>
+</html>

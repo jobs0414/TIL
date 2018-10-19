@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var city = []; //배열 변수 선언
+        // city[0] = "Seoul"
+        city[1] = "busan"
+        // city[2] = "chenogu"
+        city[3] = "jeju"
+        city[4] = "busan22"
+
+        function printArray() { 
+            for (var i =0; i< city.length; i++) {
+                if(city[i] == undefined) {
+                    document.write("봐주라")
+                }
+
+                document.write("배열" + city[i] + "<br>") 
+
+
+
+            }
+
+
+
+
+        }
+        
+        printArray();
+        document.write(typeof city + "<br>"); 
+        document.write(Array.isArray(city) + "<br>");
+        document.write(city instanceof Array + "<br>")        
+        
+        
+        
+        </script>
+</body>
+</html>

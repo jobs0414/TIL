@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrData = new Array('서울','부산','대구'); 
+        var p = arrData.push('제주','광주');
+        document.write('데이터 개수:' +p +"<br>"); 
+        document.write('원본 데이터:' + arrData + "<br>"); 
+
+        
+        var pp = arrData.pop(); 
+        document.write("데이터 개수:", pp , "<br>"); 
+        document.write("원본 데이터:", arrData, "<br>"); 
+
+
+        function myArray(item) {
+                document.write(item + "<br/>");
+        }
+        arrData.forEach(myArray); 
+
+        document.write('<hr>아이템 ')
+        arrData.forEach(funtion(item) {
+            document.write(item+"<br>");
+        });
+
+
+
+
+        arrData.forEach(function(item,index) {
+                document.write(index +":" + item + "<br>");
+
+        });
+        
+        
+        
+
+
+
+        </script>
+
+
+</body>
+</html>

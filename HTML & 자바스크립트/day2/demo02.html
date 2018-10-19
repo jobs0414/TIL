@@ -1,0 +1,38 @@
+<!Doctype html> 
+
+<html>
+<head>
+        <meta charset='utf-8'>
+        <title>사용자 정의 태그</title>
+
+</head>
+
+<body>
+    <h2>다양한 input type </h2> 
+    <form name='frm1' action='./get2.jsp' method='post'>
+        <h3>프로젝트 수행기간</h3>
+        <p>From</p><input type='date' name='from' size="50" ></p>
+        To : <input type="date" name="to" min="2018-07-01" max="2018-12-31"> 
+        <input type='month' name='birth'>
+        주간계획 : <input type='datetime-local' name="weekend"> 
+        
+       <p> 이메일 : <input type="email" name="email" value="test@test.com" >   </p>
+
+
+
+
+        <P>내용:
+            <textarea row=10 cols=80 name="contents"></textarea>
+        </P>
+
+        S
+        <p/>
+        <input type="submit" value='전송'>
+        <input type="reset"  value='다시작성'>
+    </fieldset>
+    </form>
+
+
+
+</body>
+</html>

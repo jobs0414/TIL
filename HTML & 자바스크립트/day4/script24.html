@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">안녕하신가</p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+<script>
+    
+    var car = {name: 'Sonata', speed:100, color:'Red'}; 
+        document.getElementById("p1").innerHTML = "자동차 이름:" + car[name];
+        document.getElementById("p2").innerHTML = "자동차 속도" + car.speed; 
+        document.getElementById("p3").innerHTML = "자동차의 색깔" + car.color;
+
+    
+    var obj = { 
+        m1: function() {return "hello";},
+        m2: function(a) {return a;},   
+        m3: function(a,b) {var result = a+b; return result;}
+    }
+
+    document.getElementById("p4").innerHTML = obj.m1();
+    document.getElementById("p5").innerHTML = obj.m2(20);
+    document.getElementById("p6").innerHTML = obj.m3(10,30); 
+
+   
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>

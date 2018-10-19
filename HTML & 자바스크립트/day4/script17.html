@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // var nums=[];
+        var nums = new Array();
+        nums[1]=100;
+        nums[3]=90;
+        nums[4]=80;
+
+        function printArray() {
+            var sum=0;
+            var avg=0;
+            // var count=0;
+
+            for (var i=0; i<nums.length; i++) {
+                if(nums[i] === undefined){
+                    continue;
+                }
+                sum+=nums[i];
+                // count++;
+                
+
+            }
+            avg= sum/nums.length;
+
+            document.write("합계",sum,"평군",avg )
+            
+
+        }
+        
+
+        printArray();
+
+        
+        
+        
+        
+        </script>
+
+
+
+
+
+
+
+</body>
+</html>

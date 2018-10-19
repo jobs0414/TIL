@@ -1,0 +1,50 @@
+<!Doctype html> 
+
+<html>
+<head>
+        <meta charset='utf-8'>
+        <title>사용자 정의 태그</title>
+        <meta charset="utf-8">
+        <style>
+                /*가상클래스*/ 
+                a:link { color :red; text-decoration: underline;}
+                a:visited { color: red;}
+                a:hover {text-decoration: overline; }
+                a:active {background-color : yellowgreen;}
+        
+                div.class1 {border: 1px dashed red; width:400px; height:5px;}
+                div.class1:hover {background-color: yellow;} 
+                
+                div.class2 {border: 2px yellow; width:400px; height:5px;}
+                div.class2: hover {background-color: red; }
+
+                div.class3 {width:200px; height:100px; color: green; background-color:yellow;}
+                div.class: hover { }
+
+
+        </style>
+</head>
+
+<body>
+
+        <h3>pseudo class</h3>
+        <p><a href="https://www.naver.com">네이버</a>: 마우스 이벤트에 따른 링크의 변환</p><br>
+        <div class='class1'> 
+                <h3>가상 클래스 영역1</h3>
+                계획을 세우는 곳입니다.  
+        </div>
+
+        <div class='class2'>
+                <h3>여기인가?</h3>
+                어제는 무엇을 했나요?
+        </div>
+
+
+        <div class="class3"> 
+                <h3>가상 클래스 영역</h3>
+                마우스 위치에 따른 스타일 변화
+                오늘은 무엇을 할까요? 
+        </div>
+
+</body>
+</html>
