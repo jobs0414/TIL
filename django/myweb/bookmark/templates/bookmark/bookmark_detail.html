@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>First Django Web App -Bookmark Detail </title>
-
-
-
-
-</head>
-<body>
-
-    <h1>디테일</h1>
+{% extends "base.html"%}
+{% block title%}북마크 detail {% endblock %}
+ {% block content %}
   <div id="content">
-   
+
+
+    <h1>{{ object.title}} </h1> 
+
 
       <a href="{{object.url}}">{{object.url}}</a>
      
@@ -22,5 +13,4 @@
   </div>
 
 
-</body>
-</html>
+{% endblock %}

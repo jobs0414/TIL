@@ -1,0 +1,33 @@
+<h1>검색</h1>
+
+{% extends "base.html "%}
+{% block title %} 검색 페이지 {% endblock %}
+
+{% block content %}
+<div id="content"> 
+    <h1>Blog Search Engine</h1> 
+
+    <form action="." method="POST">
+        {% csrf_token %}
+        {{ form.as_table}}
+        <input type="submit" value="Search" />
+        {% comment %} <input type="text" name="search_word" value="{{search_keyword}}" /> {% endcomment %}
+
+</div> 
+
+<br/> <br/> <br/><br/><br/><br/><br/> <br/> <br/><br/><br/><br/>
+
+{% if search_list %}
+    {% for post in search_list %}
+    <h2> {{post.title}} </h2> 
+    {{post.modify_date | date:"Y-m-d"}}
+    <p> {{ post.description }} </p> 
+    {% endfor %}
+
+{% elif search_keyword %}
+    [{{search_keyword}}] 검색 결과가 없습니다.
+
+
+{% endif %}
+
+{% endblock %}

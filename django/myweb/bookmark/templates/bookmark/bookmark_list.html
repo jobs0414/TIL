@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>First Django Web App -Bookmark List </title>
+{% extends "base.html"%}
+{% block title%}북마크 list {% endblock %}
+{% block content %}
+<div id="content">
 
-
-
-
-</head>
-<body>
     <h1>Bookmark list</h1>    
     <ul>
         {% for bookmark in object_list %}
-            <!-- <li>{{bookmark.title}}   {{bookmark.url}}  </li> -->
+            <li> {{bookmark.url_category}}
+           <a href = "{% url 'bookmark:detail' bookmark.id%}"></a>{{bookmark.title}} {{bookmark.url}}</li>
+            </li>
             
-           <li><a href = "{%url 'detail' bookmark.id%}"></a>{{bookmark.url_category}} {{bookmark.title}} {{bookmark.url}}</li>
-         
-            <a href="{{bookmark.id}}">{{bookmark.title}}<a>
         {% endfor %}
             
-
+</div>
     </ul>
 
-
-
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}연도별 포스트 {% endblock %}
+{% block content%}
+
+<div id="content"> 
+
+<h1>Post Archivejs for {{ year|date:"Y" }} </h1>
+
+<ul> 
+    {% for date in date_list %}
+        <li style="display: inline;">  
+            
+            <a href="{% url 'blog:post_month_archive' year|date:"Y" date|date:"b" %}">  {{date|date:"F"}} </a>
+   
+        </li> 
+    {% endfor %}
+</ul>
+
+
+
+<div>
+    <ul>
+        {% for post in object_list %}
+            <li> {{post.modify_date |date:"Y-m-d"}} &nbsp;&nbsp;
+                <a href ="{{ post.get_absolute_url }}"><strong> {{post.title}} </strong></a> 
+            </li>
+
+        {% endfor %}
+
+
+
+{% endblock %}
+
