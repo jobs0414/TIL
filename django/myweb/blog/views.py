@@ -8,6 +8,10 @@ from django.views.generic.edit import FormView
 from blog.forms import PostSearchForm
 from django.db.models import Q
 
+from django.urls import reverse_lazy 
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from myweb.views import LoginRequiredMixin
+
 class PostLV(ListView): 
     model = Post 
     template_name = 'blog/post_all.html'  #post_list.html 
@@ -63,6 +67,41 @@ class SearchFormView(FormView):
         context['search_list'] = post_list 
 
         return render(self.request , self.template_name, context)
+
+class PostCreateView(LoginRequiredMixin,CreateView):
+
+    model =Post 
+    fields = ['title','slug','description','content']
+    intial = {'slug','auto-filling-by-title'}
+    success_url = reverse_lazy('blog:index')
+
+    def form_valid(self,form): 
+        self.instance.owner = self.request.user
+        return super(PostCreateView,self).form_valid(form)
+        
+
+class PostChangeLV(LoginRequiredMixin,ListView):
+
+    template_name = "blog/blog_change_list.html"
+
+    def get_queryset(self): #필터링 해서 가져오면 된다. 
+        Post.objects.filter(owner = self.request.user)
+        return super().get_queryset()
+
+
+class PostUpdateView(LoginRequiredMixin,UpdateView):
+
+    model =Post 
+    fields = ['title','slug','description','content']
+    success_url = reverse_lazy('blog:index')
+
+
+class PostDeleteView(LoginRequiredMixin,DeleteView):
+
+    model =Post 
+    success_url = reverse_lazy('blog:index')
+    
+
 
 
 

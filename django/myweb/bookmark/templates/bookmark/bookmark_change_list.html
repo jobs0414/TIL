@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block title%}북마크 Change List for User {% endblock %}
+{% block content %}
+<div id="content">
+
+    <h1>BookMark change - {{user}} </h1> 
+
+    <table class="change-list"> 
+    {% for bookmark in object_list %}
+        <tr> 
+            <th>{{ bookmark.title}}</th> 
+            <th>{{ bookmark.url_category}} </th> 
+            <th>{{ bookmark.url }} </th> 
+            <th>{{ bookmark.owner }} </th> 
+            <th><a href="{% url 'bookmark:update' bookmark.id %}">Update</th>
+            <th><a href="{% url 'bookmark:delete' bookmark.id %}">Delete</th> 
+        </tr>
+
+
+        {% endfor %}
+
+</table>
+
+
+            
+
+</div>
+</ul>
+
+    {% endblock %}

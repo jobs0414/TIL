@@ -7,7 +7,8 @@
     <ul>
         {% for bookmark in object_list %}
             <li> {{bookmark.url_category}}
-           <a href = "{% url 'bookmark:detail' bookmark.id%}"></a>{{bookmark.title}} {{bookmark.url}}</li>
+           <a href="{% url 'bookmark:detail' bookmark.id%}"></a>{{bookmark.title}} {{bookmark.url}}</li>
+        
             </li>
             
         {% endfor %}

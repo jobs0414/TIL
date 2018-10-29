@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% block title%}북마크 Change List for User {% endblock %}
+{% block content %}
+<div id="content">
+    <h1>Bookmark Delete </h1> 
+
+    <form action="." method="POST"> 
+        {% csrf_token %}
+        <p>정말로 삭제하시겠습니까? </p> 
+        <input type="submit" value="삭제"/> 
+
+    </form> 
+
+</div> 
+{% endblock %}

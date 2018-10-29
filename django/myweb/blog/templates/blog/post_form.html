@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Post 생성 페이지 {% endblock %}
+
+{% load staticfiles %} 
+{% block extrastyle %} {% static "css/form.css"%}  {% endblock%}
+
+{% block content %}
+<div id ="content"> 
+    <h1>Post Create/Update - {{user}}  </h1> 
+    <form action="." method="post"> 
+        {% csrf_token %}
+
+        {% if form.errors%}
+            {{form.errors}}
+        {% endif %}
+
+
+        <p>등록(수정)하고 싶은 bookmark add</p> 
+        <fieldset class ="aligned"> 
+            <div class="form-row"> 
+                {{form.title.label_tag}} {{form.title}}
+            </div>
+
+            <div class="form-row"> 
+                {{form.slug.label_tag}} {{form.slug}}
+            </div>
+
+
+            <div class="form-row"> 
+                {{form.description.label_tag}} {{form.description}}
+
+            </div>
+
+            <div class="form-row"> 
+                {{form.content.label_tag}}  {{form.content}}
+
+
+
+
+
+
+
+
+        </fieldset>
+
+
+
+
+
+        <div class="submit-row"> 
+            <input type="submit" value='submit'/> 
+        
+
+
+    </form> 
+
+</div> 
+
+{% endblock %}

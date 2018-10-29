@@ -121,3 +121,9 @@ td, th {
     padding: 5px 15px;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
+
+table.change_list, table.change-list th, table.change-list td { 
+    border : 1px solid #ccc; 
+    
+
+}
