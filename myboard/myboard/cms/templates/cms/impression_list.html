@@ -1,0 +1,51 @@
+
+{% extends "cms/base.html" %}
+
+<!-- To-Do(1) Title -->
+
+{% block content %}
+    <!-- To-Do(2) h4 -->
+    <!-- To-Do(3) a -->
+    
+    <table class="table table-striped table-bordered">
+      <thead>
+        <!-- To-Do(4) tr -->
+      </thead>
+      <tbody>
+        <!-- To-Do(5) tr -->
+      </tbody>
+    </table>
+
+    <!-- To-Do(6) paginate -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <!-- To-Do(7) li -->
+      </ul>
+    </nav>
+
+    <!-- To-Do(8) a -->
+    
+    {# 삭제를 확인하는 Modal Dialog #}
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">확인</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>ID: [<span id="del_pk"></span>]를 삭제할까요?</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" id="del_url">OK</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content %}
+
+{% block extra_js %}
+<!-- To-Do(8) script -->
+
+{% endblock %}

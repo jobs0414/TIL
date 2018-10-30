@@ -2,14 +2,14 @@
 {% load bootstrap4 %}
 
 
-{% block title %} 도서 추가/수정  {% endblock %}
+{% block title %} 도서 추가/수정  {% endblock title %}
 
 {% block content %}
 {% if book_id %}
     <form action="{% url 'cms:book_modify' book_id=book_id %}" method="post"> 
 
 {% else %}
-    <form action="{% url 'cms:book_add'%}" method="post"> 
+    <form action="{% url 'cms:book_add' %}" method="post"> 
 
 {% endif %}
     {% csrf_token %}
@@ -18,14 +18,13 @@
 
     <div class="form-group row"> 
         <div class="offset-md-3 col-md-9"> 
-            <button type="button" class="btn btn-primary">전송</button> 
-        
+            <button class="btn btn-primary">추가</button> 
         </div>
-        </div>
+    </div>
 
     </form>
 
 
-<a href="{% url 'cms:book_list' %}" class="btn btn-secondary btn-sm">돌아가기 </a> 
+    <a href="{% url 'cms:book_list' %}" class="btn btn-secondary btn-sm">돌아가기 </a> 
 {% endblock content %}
 
