@@ -28,7 +28,7 @@ urlpatterns = [
 
     path('accounts/register/done/',UserCreateDone.as_view(), name='register_done'),
 
-    path('bookmark/',include('bookmark.urls',namespace='bookmark')),
+    path('bookmark/',include('bookmark.urls')),
 
     path('blog/',include('blog.urls',namespace='blog')),
     
